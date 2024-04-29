@@ -33,7 +33,7 @@ def model_loader():
 def enc_loader():
     print("Loading AMR class encoder")
     print("Class encoder loaded")
-    return joblib.load(r"class-encoder/crd95-NRP-ARP-CLASS-ENCODER.joblib")
+    return joblib.load(r"class-encoder/ncrd95-NRP-ARP-CLASS-ENCODER.joblib")
 
 
 
