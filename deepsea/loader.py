@@ -26,15 +26,14 @@ def load_fasta(input):
 
 def model_loader():
     print("Loading DeepSEA models")
-    aligned = tf.keras.models.load_model("../models/Fase4-HMD-align/gru")
-    unaligned = tf.keras.models.load_model("../models/Fase4-HMD-unalign/gru")
+    unaligned = tf.keras.models.load_model("models/NCRD-unalign/cnn")
     print("Models loaded")
-    return aligned, unaligned
+    return unaligned
 
 def enc_loader():
     print("Loading AMR class encoder")
     print("Class encoder loaded")
-    return joblib.load(r"class-encoder/class-encoder.joblib")
+    return joblib.load(r"class-encoder/crd95-NRP-ARP-CLASS-ENCODER.joblib")
 
 
 

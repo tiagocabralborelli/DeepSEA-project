@@ -30,11 +30,11 @@ def download():
 
 def predict(input, output):
     data = load_fasta(input = input)
-    aligned_yhat = apply_model(ALIGNED,data,ENCODER)
+    # aligned_yhat = apply_model(ALIGNED,data,ENCODER)
     unaligned_yhat = apply_model(UNALIGNED,data,ENCODER)
 
-    data["Aligned-class"] = aligned_yhat[0]
-    data["Aligned-prob"] = aligned_yhat[1]
+    # data["Aligned-class"] = aligned_yhat[0]
+    # data["Aligned-prob"] = aligned_yhat[1]
     data["Unaligned-class"] = unaligned_yhat[0]
     data["Unaligned-prob"] = unaligned_yhat[1]
     try:
