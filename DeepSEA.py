@@ -14,8 +14,14 @@ def deepsea():
     pass
 
 @deepsea.command()
-def download():
-    os.system("wget https://zenodo.org/records/10976253/files/Models.zip?download=1&preview=1")
+def download(): 
+    try:
+        os.mkdir("models")
+    except:
+        "Models directory already exists"
+
+    os.system("curl https://zenodo.org/records/11086187/files/NCRD-unalign.zip?download=1 --output models/NCRD-unalign.zip")
+    os.system("unzip models/NCRD-unalign.zip -d models")
 
 
 @deepsea.command()
