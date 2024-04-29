@@ -4,9 +4,7 @@ from deepsea.loader import load_fasta, model_loader, enc_loader
 from deepsea.deepsea import apply_model
 
 
-#MODELS
-ALIGNED,UNALIGNED = model_loader()
-ENCODER = enc_loader()
+
 
 
 @click.group()
@@ -29,6 +27,10 @@ def download():
 @click.option("--output", help = "output file name")
 
 def predict(input, output):
+    #MODELS
+    UNALIGNED = model_loader()
+    ENCODER = enc_loader()
+
     data = load_fasta(input = input)
     # aligned_yhat = apply_model(ALIGNED,data,ENCODER)
     unaligned_yhat = apply_model(UNALIGNED,data,ENCODER)
