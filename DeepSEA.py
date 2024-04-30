@@ -17,14 +17,17 @@ def download():
         os.mkdir("models")
     except:
         "Models directory already exists"
-
+    print("Downloading model T800...")
     os.system("curl https://zenodo.org/records/11086187/files/NCRD-unalign.zip?download=1 --output models/NCRD-unalign.zip")
+    print("Download complete")
+    print("Installing model T800...")
     os.system("unzip models/NCRD-unalign.zip -d models")
-
+    os.system("rm models/NCRD-unalign.zip")
+    print("Model T800 installed. You are ready to find and kill the resistance!")
 
 @deepsea.command()
-@click.option("--input", help = "path to input fasta file")
-@click.option("--output", help = "output file name")
+@click.option("--input", help = "Path to input fasta file")
+@click.option("--output", help = "Output file name")
 
 def predict(input, output):
     #MODELS
