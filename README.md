@@ -39,3 +39,12 @@ python DeepSEA.py predict --input test/test.fasta --output test_file
 ```
 If everything is correct, the directory DeepSEA-output shall appear with a csv file within
 
+**Command: predict**
+```
+python DeepSEA.py predict --input /path/to/fasta --output file_name
+
+Options:
+  --input TEXT   Path to input fasta file
+  --output TEXT  Output file name
+  --help         Show this message and exit.
+```
