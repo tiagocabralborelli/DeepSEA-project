@@ -4,9 +4,6 @@ from deepsea.loader import load_fasta, model_loader, enc_loader
 from deepsea.deepsea import apply_model
 
 
-
-
-
 @click.group()
 def deepsea():
     pass

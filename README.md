@@ -19,11 +19,14 @@ git clone https://github.com/tiagocabralborelli/DeepSEA-project.git
 cd DeepSEA-project
 ```
 Install and activate environment depending on you hardware. The gpu-env installation can take a few minutes since it's necessary to install CUDA dependencies:
+
+GPU environment
 ```
 conda env create  -f environment-gpu.yml 
 conda activate deepsea-project
-
-#Or
+```
+CPU environment
+```
 conda env create  -f environment-cpu.yml
 conda activate deepsea-project-cpu
 ```
