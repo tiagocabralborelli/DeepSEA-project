@@ -22,7 +22,7 @@ bash Anaconda3-2023.09-0-Linux-x86_64.sh
 ```
 Clone this repository and go to the 'DeepSEA-project' directory:
 ```
-git clone https://github.com/tiagocabralborelli/DeepSEA-project.git
+git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
 cd DeepSEA-project
 ```
 Install and activate environment depending on you hardware. The gpu-env installation can take a few minutes since it's necessary to install CUDA dependencies:
