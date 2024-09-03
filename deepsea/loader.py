@@ -24,11 +24,11 @@ def load_fasta(input):
     print(f"loaded {len(df)} sequences")
     return df
 
-def model_loader():
+def model_loader(model):
     print("Loading DeepSEA models")
-    unaligned = tf.keras.models.load_model("models/NCRD-unalign/cnn")
+    model = tf.keras.models.load_model(model)
     print("Models loaded")
-    return unaligned
+    return model
 
 def enc_loader():
     print("Loading AMR class encoder")
