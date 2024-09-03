@@ -3,6 +3,13 @@
 # Install
 **Install conda to controll environments**
 
+
+
+**To access complete project data and code click on Zenodo button**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13647157.svg)](https://doi.org/10.5281/zenodo.13647157)
+
+
 **Linux**
 
 Download installer:
@@ -32,13 +39,11 @@ conda activate deepsea-project-cpu
 ```
 
 # Usage
-First of all, download the neural network model using the following comand. A directory named models will be created to store it:
-```
-python DeepSEA.py download
+
 ```
 Test the intallation:
 ```
-python DeepSEA.py predict --input test/test.fasta --output test_file
+python DeepSEA.py predict --input test/test.fasta --out test_file
 ```
 If everything is correct, the directory DeepSEA-output shall appear with a csv file within
 
@@ -48,6 +53,7 @@ python DeepSEA.py predict --input /path/to/fasta --output file_name
 
 Options:
   --input TEXT   Path to input fasta file
-  --output TEXT  Output file name
+  --out TEXT  Output file name
+  --model TEXT Number of models to annotate ARP. Options: 1 or 2. Default: 1. 
   --help         Show this message and exit.
 ```
