@@ -39,8 +39,6 @@ conda activate deepsea-project-cpu
 ```
 
 # Usage
-
-```
 Test the intallation:
 ```
 python DeepSEA.py predict --input test/test.fasta --out test_file
