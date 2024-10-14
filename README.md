@@ -1,5 +1,3 @@
-![DeepSEA](images/LOGO.png)
-
 # Install
 **Install conda to controll environments**
 
