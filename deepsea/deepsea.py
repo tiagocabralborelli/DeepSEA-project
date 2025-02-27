@@ -8,7 +8,14 @@ import tensorflow as tf
 import subprocess
 import pandas as pd
 import math
+import joblib
 from collections import Counter
+
+
+ENCODER = joblib.load("class-encoder/CLASS-ENCODER-COMPLETE.joblib")
+
+def translated(Index,Encoder):
+    return Encoder.categories_[0][Index]
 
 def ProteinAligner(fasta_input):
     mafft_cline = MafftCommandline(input="-")
@@ -64,6 +71,7 @@ def RunCDHIT(path, name, threshold = 0.95):
         "-aS",str(0.9)
         ])
     print("CD-HIT Finished")
+
 def ParseCDhit(path):
     
     clusters = []
@@ -106,3 +114,20 @@ def ShannonEntropy(Alignment):
         Entropy = Calculate(collumn)
         FinalEntropy.append(Entropy)
     return FinalEntropy
+
+def ParseFasta(path):
+    ProteinId = []
+    ProteinSequences = []
+    for record in SeqIO.parse(path, "fasta"):
+        ProteinId.append(record.id)
+        ProteinSequences.append(record.seq)
+    return ProteinId, ProteinSequences
+def CreateTensor(ProteinSequences):
+    return [" ".join(list(x)) for x in ProteinSequences]
+def RunModel(ProteinsTensor, model_path):
+    model = tf.keras.models.load_model(model_path)
+    ModelPred = model.predict(ProteinsTensor, verbose=0)
+    ModelClass = np.argmax(ModelPred, axis = 1)
+    ModelClass = [translated(x,ENCODER) for x in ModelClass]
+    ModelProbs = np.max(ModelPred, axis = 1)
+    return ModelClass, ModelProbs
