@@ -39,17 +39,23 @@ conda activate deepsea-project-cpu
 # Usage
 Test the installation:
 ```
-python DeepSEA.py predict --input test/test.fasta --out test_file
+python DeepSEA.py run --input test/test.fasta --outname test_file
 ```
-If everything is correct, the directory DeepSEA-output shall appear with a CSV file within.
+If everything is correct, a CSV file shall appear.
 
-**Command: predict**
+**Command: run**
 ```
-python DeepSEA.py predict --input /path/to/fasta --output file_name
+python DeepSEA.py predict --input /path/to/fasta --outname file_name
 
 Options:
   --input TEXT   Path to input fasta file
-  --out TEXT     Output file name
-  --model TEXT   Number of models to annotate ARP. Options: 1 or 2. Default: 1. 
-  --help         Show this message and exit.
+  --outname     Output file name
+```
+**Command: features**
+```
+python DeepSEA.py predict --features /path/to/fasta --outname feature_heatmap
+
+Options:
+  --input TEXT   Path to input fasta file
+  --outname     Output file name
 ```
