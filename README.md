@@ -45,7 +45,7 @@ If everything is correct, a CSV file shall appear.
 
 **Command: run**
 ```
-python DeepSEA.py predict --input /path/to/fasta --outname file_name
+python DeepSEA.py run --input /path/to/fasta --outname file_name
 
 Options:
   --input TEXT   Path to input fasta file
@@ -53,7 +53,7 @@ Options:
 ```
 **Command: features**
 ```
-python DeepSEA.py predict --features /path/to/fasta --outname feature_heatmap
+python DeepSEA.py features --input /path/to/fasta --outname feature_heatmap
 
 Options:
   --input TEXT   Path to input fasta file
