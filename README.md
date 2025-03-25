@@ -23,7 +23,7 @@ Clone this repository and go to the 'DeepSEA-project' directory:
 git clone https://github.com/computational-chemical-biology/DeepSEA-project.git
 cd DeepSEA-project
 ```
-Install and activate environment depending on your hardware. The gpu-env installation can take a few minutes since it's necessary to install CUDA dependencies:
+Install and activate the environment depending on your hardware. The GPU-env installation can take a few minutes since it's necessary to install CUDA dependencies:
 
 GPU environment:
 ```
