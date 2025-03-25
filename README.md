@@ -52,10 +52,12 @@ Options:
   --outname     Output file name
 ```
 **Command: features**
+
+DeepSEA can be employed on multiple sequence alignment analysis to reveal regions of interest. 
 ```
 python DeepSEA.py features --input /path/to/fasta --outname feature_heatmap
 
 Options:
-  --input TEXT   Path to input fasta file
+  --input TEXT   Path to input: a multiple sequence alignment in fasta format
   --outname     Output file name
 ```
