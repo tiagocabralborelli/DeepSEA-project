@@ -10,7 +10,7 @@ import pandas as pd
 import math
 import joblib
 from collections import Counter
-
+import os
 
 ENCODER = joblib.load("class-encoder/CLASS-ENCODER-COMPLETE.joblib")
 
@@ -124,9 +124,19 @@ def ParseFasta(path):
     return ProteinId, ProteinSequences
 def CreateTensor(ProteinSequences):
     return [" ".join(list(x)) for x in ProteinSequences]
+
+
+
+    
 def RunModel(ProteinsTensor, model_path):
     model = tf.keras.models.load_model(model_path)
+
+
+
     ModelPred = model.predict(ProteinsTensor, verbose=0)
+    
+    
+    
     ModelClass = np.argmax(ModelPred, axis = 1)
     ModelClass = [translated(x,ENCODER) for x in ModelClass]
     ModelProbs = np.max(ModelPred, axis = 1)

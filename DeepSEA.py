@@ -5,6 +5,7 @@ from Bio import AlignIO
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
 @click.group()
 def deepsea():
     pass
