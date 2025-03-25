@@ -32,7 +32,7 @@ conda activate deepsea-project
 ```
 CPU environment:
 
-For cases in which there is no GPU available, there is an option to use DeepSEA in Google Collab
+For cases in which there is no GPU available, there is an option to use DeepSEA in Google Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tiagocabralborelli/DeepSEA-project/blob/main/DeepSEA.ipynb)
 
