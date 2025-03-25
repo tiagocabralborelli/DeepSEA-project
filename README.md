@@ -31,10 +31,10 @@ conda env create -f environment-gpu.yml
 conda activate deepsea-project
 ```
 CPU environment:
-```
-conda env create -f environment-cpu.yml
-conda activate deepsea-project-cpu
-```
+
+For cases in which there is no GPU available, there is a option to use DeepSEA in Google Collab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tiagocabralborelli/DeepSEA-project/blob/main/DeepSEA.ipynb)
 
 # Usage
 Test the installation:
